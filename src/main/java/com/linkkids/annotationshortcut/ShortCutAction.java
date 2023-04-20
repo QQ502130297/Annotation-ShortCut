@@ -16,7 +16,7 @@ public class ShortCutAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent e) {
         String shortCut = Messages.showInputDialog("Shortcut", "Modify the Shortcut", Messages.getQuestionIcon());
-        if(!"".equals(shortCut)){
+        if(shortCut != null && !"".equals(shortCut.trim())){
             this.shortCut = shortCut;
         }
     }
